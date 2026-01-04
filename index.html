@@ -12,7 +12,45 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <!-- Style -->
   <link rel="stylesheet" href="./style.css">
+  <style>
+    .card img {
+      overflow: hidden;
+      object-fit: cover;
+    }
 
+    .cart-box {
+      margin-left: 715px;
+      margin-bottom: 5px;
+      width: 380px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .btn-pay{
+      padding: 10px 20px;
+      border-radius: 10px;
+      background-color: blue;
+      color: white;
+      border: 2px solid white;
+    }
+    .card{
+      border: 2px solid white;
+      overflow: hidden;
+      border-radius: 5px;
+      background-color: rgba(128, 128, 128, 0.218);
+    }
+    .name-brand{
+      font-weight: 600;
+    }
+    .dollar{
+      color: red;
+      font-weight: 800;
+    }
+    .cart-box{
+      margin-top: 50px;
+    }
+  </style>
 </head>
 
 <body>
@@ -308,8 +346,23 @@
         <img src="./assets/bootom.png" alt="">
     </div>
  </div>
+ 
  <!-- Swiper Card -->
  <div class="card-container">
+  <!-- javasript -->
+    <div class="cart-box mt-4">
+    <h4>🧾 Product Payment</h4>
+    <ul id="cartItems" class="list-group mb-3"></ul>
+    <!-- <h5>Total: $<span id="total">0</span></h5> -->
+    <!-- <button  class="buy-now" type="submit">Buy Now</button> -->
+     <button class="btn-pay btn-primary mt-2"
+      onclick="addToCart('Payment', payment)">
+       Buy Now
+      </button>
+      <button class="btn-pay btn-danger mt-2" onclick="clearCart()">
+       Clear
+      </button>
+  </div>
     <h1 class="deal-coundown">2025 Deals Countdown ⏳</h1>
     <div class="all-card">
       <div class="view-card">      
@@ -329,6 +382,10 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Cushion Running Sneakers</p>
+           <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 8.47)">
+            Buy
+          </button>
       </div>
       <div class="view-card">
           <img src="https://zandokh.com/image/cache/catalog/products/2025-06/2112503705%20Replace/ZANDO2405202526749-cr-450x672.jpg" alt="">
@@ -347,6 +404,10 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Regular Fit T-Shirts</p>
+                     <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 18.35)">
+            Buy
+          </button>
       </div>
       <div class="view-card">
           <img src="https://zandokh.com/image/cache/catalog/products/2025-07/21225031256/Untitled%20Session1209-cr-450x672.jpg" alt="">
@@ -365,6 +426,10 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Baggy Straight Fit Jean</p>
+                     <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 11.96)">
+            Buy
+          </button>
       </div>
       <div class="view-card">
           <img src="https://zandokh.com/image/cache/catalog/products/2025-07/11225051107/ZD__0348-cr-450x672.jpg" alt="">
@@ -383,8 +448,13 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Wide Leg Trousers</p>
+            <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 18.66)">
+            Buy
+          </button>
       </div>
     </div>
+    <br><br>
      <div class="all-card">
       <div class="view-card">
           <img src="./assets/women1.png" alt="">
@@ -403,6 +473,10 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Mini Flared Dresses</p>
+            <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 18.66)">
+            Buy
+          </button>
       </div>
       <div class="view-card">
           <img src="./assets/women2.png" alt="">
@@ -421,6 +495,10 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Midi Skirt</p>
+           <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 18.66)">
+            Buy
+          </button>
       </div>
       <div class="view-card">
           <img src="./assets/women3.png" alt="">
@@ -439,6 +517,10 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Cut Cropped Top</p>
+                     <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 18.66)">
+            Buy
+          </button>
       </div>
       <div class="view-card">
           <img src="https://zandokh.com/image/cache/catalog/products/2025-08/22225061641/ZD__9673-cr-450x672.jpg" alt="">
@@ -457,83 +539,14 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Midi Skirt</p>
+                     <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 18.66)">
+            Buy
+          </button>
       </div>
     </div>
+     <br><br>
     <h1 class="deal-coundown">Just Tops. Just Perfect.👕</h1>
-    <div class="all-card">
-      <div class="view-card">
-          <img src="https://zandokh.com/image/cache/catalog/products/2025-11/11225081234/TAKK7829-cr-450x672.jpg" alt="">
-          <div class="dis">
-            <p>-20%</p>
-             <p>In-stock</p>
-           </div>
-          <div class="newin">
-          <p >Shop/New In</p>
-          </div>
-          <div class="field-set">
-           <div class="decoration">
-               <p class="price-original">US $19.95</p>
-               <p class="price">US $15.96</p>
-            </div>
-            <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
-          </div>
-          <p class="role">Regular Denim Shirts</p>
-      </div>
-      <div class="view-card">
-          <img src="https://zandokh.com/image/cache/catalog/products/2025-11/21225081485/ZD__9902-cr-450x672.jpg" alt="">
-          <div class="dis">
-            <p>-20%</p>
-            <p>In-stock</p>
-           </div>
-          <div class="newin">
-          <p >Shop/New In</p>
-          </div>
-          <div class="field-set">
-            <div class="decoration">
-               <p class="price-original">US $19.95</p>
-               <p class="price">US $15.96</p>
-            </div>
-            <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
-          </div>
-          <p class="role">Mesh Jersey T-Shirts</p>
-      </div>
-      <div class="view-card">
-          <img src="https://zandokh.com/image/cache/catalog/products/2025-11/2112508768/ZD__9097-cr-450x672.jpg" alt="">
-          <div class="dis">
-            <p>-20%</p>
-            <p>Out-stock</p>
-           </div>
-          <div class="newin">
-          <p >TEN11</p>
-          </div>
-          <div class="field-set">
-            <div class="decoration">
-               <p class="price-original">US $19.95</p>
-               <p class="price">US $15.96</p>
-            </div>
-            <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
-          </div>
-          <p class="role">Loose Fitted Denim Shirts</p>
-      </div>
-      <div class="view-card">
-          <img src="https://zandokh.com/image/cache/catalog/products/2025-09/21225081352/ZD__5546-cr-450x672.jpg" alt="">
-          <div class="dis">
-            <p>-20%</p>
-             <p>Out-stock</p>
-           </div>
-          <div class="newin">
-          <p >TEN11</p>
-          </div>
-          <div class="field-set">
-           <div class="decoration">
-               <p class="price-original">US $19.95</p>
-               <p class="price">US $15.96</p>
-            </div>
-            <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
-          </div>
-          <p class="role">Loose Fitted T-Shirt</p>
-      </div>
-    </div>
     <div class="all-card">
       <div class="view-card">
           <img src="https://zandokh.com/image/cache/catalog/products/2025-10/11225081300/ZD__8467-cr-450x672.jpg" alt="">
@@ -552,6 +565,10 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Regular T-Shirts</p>
+                     <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 15.96)">
+            Buy
+          </button>
       </div>
       <div class="view-card">
           <img src="https://zandokh.com/image/cache/catalog/products/2025-04/3122410006%20replace/ZANDO2504202519037-cr-450x672.jpg" alt="">
@@ -570,6 +587,10 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Relaxed Fit T-Shirts</p>
+                     <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 15.96)">
+            Buy
+          </button>
       </div>
       <div class="view-card">
           <img src="https://zandokh.com/image/cache/catalog/products/2025-06/11225041042/DSC04744-cr-450x672.jpg" alt="">
@@ -588,6 +609,10 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Unisex Oversized Jersey Tank Top</p>
+                     <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 15.96)">
+            Buy
+          </button>
       </div>
       <div class="view-card">
           <img src="https://zandokh.com/image/cache/catalog/products/2025-11/11225081228/ZD__7426-cr-450x672.jpg" alt="">
@@ -606,8 +631,13 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Loose Fitted T-Shirts</p>
+                     <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 15.96)">
+            Buy
+          </button>
       </div>
     </div>
+    <br><br>
     <!-- Card -->
      <h1 class="deal-coundown">Lifestyle Must-Haves ✨</h1>
     <div class="all-card">
@@ -628,6 +658,10 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Lace Trim Tops</p>
+                     <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 15.96)">
+            Buy
+          </button>
       </div>
       <div class="view-card">
           <img src="https://zandokh.com/image/cache/catalog/products/2025-11/12225101874/ZD__9991-cr-450x672.jpg" alt="">
@@ -646,6 +680,10 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Mesh Jersey T-Shirts</p>
+           <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 15.96)">
+            Buy
+          </button>
       </div>
       <div class="view-card">
           <img src="https://zandokh.com/image/cache/catalog/products/2025-11/11225081304/ZD__9870-cr-450x672.jpg" alt="">
@@ -664,6 +702,10 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Mexi Lace Skirt</p>
+          <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 15.96)">
+            Buy
+          </button>
       </div>
       <div class="view-card">
           <img src="https://zandokh.com/image/cache/catalog/products/2025-11/21225081394/TAKK8970-cr-450x672.jpg" alt="">
@@ -682,82 +724,13 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Regular T-Shirts With Printed</p>
+          <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 15.96)">
+            Buy
+          </button>
       </div>
     </div>
-        <div class="all-card">
-      <div class="view-card">
-          <img src="https://zandokh.com/image/cache/catalog/products/2025-11/11225101361/ZD__0205-cr-450x672.jpg" alt="">
-          <div class="dis">
-            <p>-20%</p>
-             <p>In-stock</p>
-           </div>
-          <div class="newin">
-          <p >Shop/New In</p>
-          </div>
-          <div class="field-set">
-          <div class="decoration">
-               <p class="price-original">US $19.95</p>
-               <p class="price">US $15.96</p>
-            </div>
-            <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
-          </div>
-          <p class="role">Balloon Denim Jean</p>
-      </div>
-      <div class="view-card">
-          <img src="https://zandokh.com/image/cache/catalog/products/2025-11/22225081808/TAKK7953-cr-450x672.jpg" alt="">
-          <div class="dis">
-            <p>-20%</p>
-             <p>In-stock</p>
-           </div>
-          <div class="newin">
-          <p >Shop/New In</p>
-          </div>
-          <div class="field-set">
-            <div class="decoration">
-               <p class="price-original">US $19.95</p>
-               <p class="price">US $15.96</p>
-            </div>
-            <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
-          </div>
-          <p class="role">Regular Strip T-Shirt</p>
-      </div>
-      <div class="view-card">
-          <img src="https://zandokh.com/image/cache/catalog/products/2025-11/22225081803/TAKK7703-cr-450x672.jpg" alt="">
-          <div class="dis">
-            <p>-20%</p>
-             <p>In-stock</p>
-           </div>
-          <div class="newin">
-          <p >TEN11</p>
-          </div>
-          <div class="field-set">
-            <div class="decoration">
-               <p class="price-original">US $19.95</p>
-               <p class="price">US $15.96</p>
-            </div>
-            <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
-          </div>
-          <p class="role">Ribbed Cropped Top</p>
-      </div>
-      <div class="view-card">
-          <img src="https://zandokh.com/image/cache/catalog/products/2025-11/22225081766/TAKK8939-cr-450x672.jpg" alt="">
-          <div class="dis">
-            <p>-20%</p>
-             <p>In-stock</p>
-           </div>
-          <div class="newin">
-          <p >TEN11</p>
-          </div>
-          <div class="field-set">
-            <div class="decoration">
-               <p class="price-original">US $19.95</p>
-               <p class="price">US $15.96</p>
-            </div>
-            <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
-          </div>
-          <p class="role">Brogger Tiered Top</p>
-      </div>
-    </div>
+    <br><br>
     <!-- Shoes card -->
     <h1 class="deal-coundown">Lifestyle Must-Haves ✨</h1>
     <div class="all-card">
@@ -773,11 +746,15 @@
           <div class="field-set">
            <div class="decoration">
                <p class="price-original">US $19.95</p>
-               <p class="price">US $19.95</p>
+               <p class="price">US $15.95</p>
             </div>
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Lace Trim Tops</p>
+            <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 15.95)">
+            Buy
+          </button>
       </div>
       <div class="view-card">
           <img src="https://zandokh.com/image/cache/catalog/products/2025-11/12225101874/ZD__9991-cr-450x672.jpg" alt="">
@@ -791,11 +768,15 @@
           <div class="field-set">
            <div class="decoration">
                <p class="price-original">US $19.95</p>
-               <p class="price">US $19.95</p>
+               <p class="price">US $15.95</p>
             </div>
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Mesh Jersey T-Shirts</p>
+            <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 15.95)">
+            Buy
+          </button>
       </div>
       <div class="view-card">
           <img src="https://zandokh.com/image/cache/catalog/products/2025-11/11225081304/ZD__9870-cr-450x672.jpg" alt="">
@@ -809,11 +790,15 @@
           <div class="field-set">
             <div class="decoration">
                <p class="price-original">US $19.95</p>
-               <p class="price">US $19.95</p>
+               <p class="price">US $15.95</p>
             </div>
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Mexi Lace Skirt</p>
+            <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 15.95)">
+            Buy
+          </button>
       </div>
       <div class="view-card">
           <img src="https://zandokh.com/image/cache/catalog/products/2025-11/21225081394/TAKK8970-cr-450x672.jpg" alt="">
@@ -827,13 +812,18 @@
           <div class="field-set">
            <div class="decoration">
                <p class="price-original">US $19.95</p>
-               <p class="price">US $19.95</p>
+               <p class="price">US $15.95</p>
             </div>
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Regular T-Shirts With Printed</p>
+            <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 15.95)">
+            Buy
+          </button>
       </div>
     </div>
+    <br><br>
      <h1 class="deal-coundown">Daily Shoe Essentials 🛍️</h1>
     <div class="all-card">
       <div class="view-card">
@@ -853,6 +843,10 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Nike Air Jordan</p>
+            <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 30.94)">
+            Buy
+          </button>
       </div>
       <div class="view-card">
           <img src="https://i.pinimg.com/1200x/9a/05/08/9a050836e3c8ce14a833f3105d86af57.jpg" alt="">
@@ -871,6 +865,10 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Nike Air Zoom BB NXT</p>
+            <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 30.94)">
+            Buy
+          </button>
       </div>
       <div class="view-card">
           <img src="https://i.pinimg.com/736x/a8/38/96/a83896ee2ad6405346f3d37b6d61770e.jpg" alt="">
@@ -889,6 +887,10 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Mexi Lace Skirt</p>
+            <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 30.94)">
+            Buy
+          </button>
       </div>
       <div class="view-card">
           <img src="https://i.pinimg.com/736x/13/9b/ea/139bea477b9758a563ff7921dd3ff1b3.jpg" alt="">
@@ -907,9 +909,14 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Air Jordan & Just Do It</p>
+            <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt',30.94)">
+            Buy
+          </button>
       </div>
       <!-- Belt container -->
     </div>
+    <br><br>
     <h1 class="deal-coundown">Daily Belt Essentials 🛍️</h1>
     <div class="all-card">
       <div class="view-card">
@@ -929,6 +936,10 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Belt Geometric Buckle Belt</p>
+            <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 30.94)">
+            Buy
+          </button>
       </div>
       <div class="view-card">
           <img src="https://i.pinimg.com/1200x/1d/29/49/1d294921f55bd189ced9955e6c1eb6f0.jpg" alt="">
@@ -947,6 +958,10 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role"> Belt Geometric Buckle Belt</p>
+            <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 30.94)">
+            Buy
+          </button>
       </div>
       <div class="view-card">
           <img src="https://i.pinimg.com/1200x/2e/07/c3/2e07c3362ea0949f112ebb308b39e744.jpg" alt="">
@@ -965,6 +980,10 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Men Automatic Buckle Belt</p>
+            <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 30.94)">
+            Buy
+          </button>
       </div>
       <div class="view-card">
           <img src="https://i.pinimg.com/736x/36/20/c0/3620c04d0a9927229b2c35246f61b41a.jpg" alt="">
@@ -983,8 +1002,13 @@
             <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
           </div>
           <p class="role">Snake Texture Leather Set</p>
+            <button class="btn-pay btn-primary"
+            onclick="addToCart('Sport T-Shirt', 30.94)">
+            Buy
+          </button>
       </div>
     </div>
+    <br><br>
  <div class="end-container">
     <div class="app">
       <p>G3 APP</p>
@@ -1031,6 +1055,33 @@
   <hr style="height: 7px;background-color: black;margin-top: 10px;">
   <h1>Thanks You</h1>
  </div>
+
+ <script>
+  let total = 0;
+
+  function addToCart(name, price) {
+    const cartItems = document.getElementById("cartItems");
+
+    const li = document.createElement("li");
+    li.className = "list-group-item d-flex justify-content-between";
+    li.innerHTML = `<span>${name}</span><span>$${price}</span>`;
+
+    cartItems.appendChild(li);
+    total += price;
+    payment=total;
+    document.getElementById("total").innerText = total;
+    document.getElementById("payment").innerText= payment;
+  }
+
+  function clearCart() {
+    document.getElementById("cartItems").innerHTML = "";
+    total = 0;
+    payment = 0;
+    document.getElementById("total").innerText = 0;
+    document.getElementById("payment").innerText = 0;
+  }
+
+</script>
 </body>
 <!-- lucid -->
 <script>
