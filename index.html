@@ -19,20 +19,29 @@
     }
 
     .cart-box {
-      margin-left: 715px;
+      margin-left: 850px;
       margin-bottom: 5px;
-      width: 380px;
+      width: 500px;
       background: #fff;
       border-radius: 8px;
-      padding: 15px;
+      padding: 25px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+       margin-top: 50px;
     }
-    .btn-pay{
-      padding: 10px 20px;
+    .btn-pay-now{
+      padding: 10px 30px;
       border-radius: 10px;
       background-color: blue;
       color: white;
       border: 2px solid white;
+    }
+     .btn-pay{
+      padding: 10px 70px;
+      border-radius: 10px;
+      background-color: blue;
+      color: white;
+      border: 2px solid white;
+      margin-left:80px;
     }
     .card{
       border: 2px solid white;
@@ -46,9 +55,6 @@
     .dollar{
       color: red;
       font-weight: 800;
-    }
-    .cart-box{
-      margin-top: 50px;
     }
   </style>
 </head>
@@ -74,8 +80,8 @@
           <button class="shopbtn" type="button"><i style="color:red" data-lucide="heart"></i></button>
           <button class="shopbtn" type="button"><i style="color:red" data-lucide="bell"></i></button>
           <button class="shopbtn" type="button"><i style="color:red" data-lucide="shopping-bag"></i></button>
-          <button class="login"><a href="/pages/form.html">login</a></button>
-          <button class="login"><a href="/pages/create.html">Register</a></button>
+          <button class="login"><a style="color: white;" href="/pages/form.html">login</a></button>
+          <button class="login"><a style="color: white;" href="/pages/create.html">Register</a></button>
         </div>
       </div>
     </div>
@@ -355,11 +361,11 @@
     <ul id="cartItems" class="list-group mb-3"></ul>
     <!-- <h5>Total: $<span id="total">0</span></h5> -->
     <!-- <button  class="buy-now" type="submit">Buy Now</button> -->
-     <button class="btn-pay btn-primary mt-2"
+     <button class="btn-pay-now btn-primary mt-2"
       onclick="addToCart('Payment', payment)">
-       Buy Now
+       Buy
       </button>
-      <button class="btn-pay btn-danger mt-2" onclick="clearCart()">
+      <button class="btn-pay-now btn-danger mt-2" onclick="clearCart()">
        Clear
       </button>
   </div>
@@ -383,7 +389,7 @@
           </div>
           <p class="role">MEN PIECE SUITS</p>
            <button class="btn-pay btn-primary"
-            onclick="addToCart('Sport T-Shirt', 135)">
+            onclick="addToCart('MEN PIECE SUITS', 135)">
             Buy
           </button>
       </div>
@@ -405,7 +411,7 @@
           </div>
           <p class="role">Sport Pants</p>
                      <button class="btn-pay btn-primary"
-            onclick="addToCart('Sport T-Shirt', 18.35)">
+            onclick="addToCart('Sport Pants', 25)">
             Buy
           </button>
       </div>
@@ -427,7 +433,7 @@
           </div>
           <p class="role">MEN PIECE SUITS</p>
             <button class="btn-pay btn-primary"
-            onclick="addToCart('Sport T-Shirt', 35)">
+            onclick="addToCart('MEN PIECE SUITS', 35)">
             Buy
           </button>
       </div>
@@ -449,103 +455,12 @@
           </div>
           <p class="role">Minimal Style</p>
             <button class="btn-pay btn-primary"
-            onclick="addToCart('Sport T-Shirt', 18.66)">
+            onclick="addToCart('Minimal Style', 35)">
             Buy
           </button>
       </div>
     </div>
-    <br><br>
-     <!-- <div class="all-card">
-      <div class="view-card">
-          <img src="./assets/women1.png" alt="">
-          <div class="dis">
-            <p>-20%</p>
-            <p>Out-stock</p>
-           </div>
-          <div class="newin">
-          <p >TEN11</p>
-          </div>
-          <div class="field-set">
-           <div class="decoration">
-               <p class="price-original">US $21.95</p>
-               <p class="price">US $18.66</p>
-            </div>
-            <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
-          </div>
-          <p class="role">Mini Flared Dresses</p>
-            <button class="btn-pay btn-primary"
-            onclick="addToCart('Sport T-Shirt', 18.66)">
-            Buy
-          </button>
-      </div>
-      <div class="view-card">
-          <img src="./assets/women2.png" alt="">
-          <div class="dis">
-            <p>-20%</p>
-            <p>In-stock</p>
-           </div>
-          <div class="newin">
-          <p >TEN11</p>
-          </div>
-          <div class="field-set">
-            <div class="decoration">
-               <p class="price-original">US $21.95</p>
-               <p class="price">US $18.66</p>
-            </div>
-            <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
-          </div>
-          <p class="role">Midi Skirt</p>
-           <button class="btn-pay btn-primary"
-            onclick="addToCart('Sport T-Shirt', 18.66)">
-            Buy
-          </button>
-      </div>
-      <div class="view-card">
-          <img src="./assets/women3.png" alt="">
-          <div class="dis">
-            <p>-20%</p>
-             <p>In-stock</p>
-           </div>
-          <div class="newin">
-          <p >TEN11</p>
-          </div>
-          <div class="field-set">
-           <div class="decoration">
-               <p class="price-original">US $21.95</p>
-               <p class="price">US $18.66</p>
-            </div>
-            <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
-          </div>
-          <p class="role">Cut Cropped Top</p>
-                     <button class="btn-pay btn-primary"
-            onclick="addToCart('Sport T-Shirt', 18.66)">
-            Buy
-          </button>
-      </div>
-      <div class="view-card">
-          <img src="https://zandokh.com/image/cache/catalog/products/2025-08/22225061641/ZD__9673-cr-450x672.jpg" alt="">
-          <div class="dis">
-            <p>-20%</p>
-             <p>In-stock</p>
-           </div>
-          <div class="newin">
-          <p >TEN11</p>
-          </div>
-          <div class="field-set">
-           <div class="decoration">
-               <p class="price-original">US $21.95</p>
-               <p class="price">US $18.66</p>
-            </div>
-            <a href=""><img class="heart" src="./assets/heart.png" alt=""></a>
-          </div>
-          <p class="role">Midi Skirt</p>
-                     <button class="btn-pay btn-primary"
-            onclick="addToCart('Sport T-Shirt', 18.66)">
-            Buy
-          </button>
-      </div>
-    </div> -->
-     <br><br>
+    <br><br><br><br>
     <h1 class="deal-coundown">Just Tops. Just Perfect.👕</h1>
     <div class="all-card">
       <div class="view-card">
@@ -566,7 +481,7 @@
           </div>
           <p class="role">Regular T-Shirts</p>
                      <button class="btn-pay btn-primary"
-            onclick="addToCart('Sport T-Shirt', 15.96)">
+            onclick="addToCart('Regular T-Shirts', 15.96)">
             Buy
           </button>
       </div>
@@ -588,7 +503,7 @@
           </div>
           <p class="role">T-Shirts</p>
                      <button class="btn-pay btn-primary"
-            onclick="addToCart('Sport T-Shirt', 11.10)">
+            onclick="addToCart('T-Shirts', 11.10)">
             Buy
           </button>
       </div>
@@ -610,7 +525,7 @@
           </div>
           <p class="role">T-shirt</p>
                      <button class="btn-pay btn-primary"
-            onclick="addToCart('Sport T-Shirt', 11.10)">
+            onclick="addToCart('T-shirt', 11.10)">
             Buy
           </button>
       </div>
@@ -632,12 +547,12 @@
           </div>
           <p class="role">T-Shirt</p>
                      <button class="btn-pay btn-primary"
-            onclick="addToCart('Sport T-Shirt', 11.10)">
+            onclick="addToCart('T-Shirt', 11.10)">
             Buy
           </button>
       </div>
     </div>
-    <br><br>
+    <br><br><br><br>
     <!-- Card -->
      <h1 class="deal-coundown">Sport clothes ✨</h1>
     <div class="all-card">
@@ -659,7 +574,7 @@
           </div>
           <p class="role">Sport Running</p>
                      <button class="btn-pay btn-primary"
-            onclick="addToCart('Sport T-Shirt', 20)">
+            onclick="addToCart('Sport Running', 20)">
             Buy
           </button>
       </div>
@@ -681,7 +596,7 @@
           </div>
           <p class="role">sport shorts</p>
            <button class="btn-pay btn-primary"
-            onclick="addToCart('Sport T-Shirt', 15.96)">
+            onclick="addToCart('sport shorts', 15.96)">
             Buy
           </button>
       </div>
@@ -703,7 +618,7 @@
           </div>
           <p class="role">sport T-shirt</p>
           <button class="btn-pay btn-primary"
-            onclick="addToCart('Sport T-Shirt', 20)">
+            onclick="addToCart('sport T-shirt', 20)">
             Buy
           </button>
       </div>
@@ -725,12 +640,12 @@
           </div>
           <p class="role">Sport Set</p>
           <button class="btn-pay btn-primary"
-            onclick="addToCart('Sport T-Shirt', 18)">
+            onclick="addToCart('Sport Set', 18)">
             Buy
           </button>
       </div>
     </div>
-    <br><br>
+    <br><br><br><br>
      <h1 class="deal-coundown">Daily Shoe Essentials 🛍️</h1>
     <div class="all-card">
       <div class="view-card">
@@ -751,7 +666,7 @@
           </div>
           <p class="role">Nike shoes</p>
             <button class="btn-pay btn-primary"
-            onclick="addToCart('Sport T-Shirt', 30.94)">
+            onclick="addToCart('Nike shoes', 30.94)">
             Buy
           </button>
       </div>
@@ -773,7 +688,7 @@
           </div>
           <p class="role">Shoe Vanguard</p>
             <button class="btn-pay btn-primary"
-            onclick="addToCart('Sport T-Shirt', 30.94)">
+            onclick="addToCart('Shoe Vanguard', 30.94)">
             Buy
           </button>
       </div>
@@ -795,7 +710,7 @@
           </div>
           <p class="role">Nike shoes</p>
             <button class="btn-pay btn-primary"
-            onclick="addToCart('Sport T-Shirt', 30.94)">
+            onclick="addToCart('Nike shoes', 30.94)">
             Buy
           </button>
       </div>
@@ -817,13 +732,13 @@
           </div>
           <p class="role">Sport Shoes</p>
             <button class="btn-pay btn-primary"
-            onclick="addToCart('Sport T-Shirt',30.94)">
+            onclick="addToCart('Sport Shoes',30.94)">
             Buy
           </button>
       </div>
       <!-- Belt container -->
     </div>
-    <br><br>
+    <br><br><br><br>
     <h1 class="deal-coundown">Daily Belt Essentials 🛍️</h1>
     <div class="all-card">
       <div class="view-card">
@@ -915,7 +830,7 @@
           </button>
       </div>
     </div>
-    <br><br>
+    <br><br><br><br>
  <div class="end-container">
     <div class="app">
       <p>G3 APP</p>

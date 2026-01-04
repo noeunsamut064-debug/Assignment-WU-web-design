@@ -57,7 +57,7 @@
   display: flex;
   /* justify-content: flex-start; */
   align-items: center;
-  gap: 10px;
+  gap: 150px;
   margin-top: -40px;
   margin-left: 540px;
 }
@@ -65,6 +65,7 @@
 .NavbarTop-right .dropdown {
   width: 250px;
   position: relative;
+  margin-left: 110px;
 }
 
 .dropdown .view {
@@ -121,11 +122,15 @@
   
 }
 .login{
+  background-color: #00000083;
   padding: 10px 25px;
   border-radius: 10px;
   border: none;
   margin-left: 70px;
   margin-right: -60px;
+}
+.login:hover{
+  background-color: #000000;
 }
 /* Navbar Bottom */
 .navbar-bottom {
@@ -334,7 +339,7 @@
 
 /* Swiper */
 .main-container{
-  width:96%;
+  width:95%;
   height: 400px;
   margin-top: 30px;
 }
@@ -398,10 +403,11 @@
 .button-prev i{
   transform: rotate(540deg);
 }
+/* show container */
 .show-container{
   width: 90%;
   height: 500px;
-  margin-top: 155px;
+  margin-top: 300px;
   margin-left: 77px;
 }
 .show-container .img-card{
@@ -431,7 +437,7 @@
 .card-container{
   width: 90%;
   height: 400px;
-  margin-top: 43%;
+  margin-top: 36%;
   margin-left: 78px;
 }
 .card-container .deal-coundown{
@@ -449,7 +455,7 @@
 }
 .card-container .view-card{
   width: 24%;
-  height: 100%;
+  height: 100%; 
 }
 .card-container .view-card img{
   width: 100%;
@@ -458,20 +464,22 @@
 }
 .card-container .field-set{
   display: flex;
-  gap: 120px;
+  gap: 190px;
   margin-top: 50px;
   color: red;
   font-weight: 600;
   font-size: 18px;
 }
-.card-container .field-set .price a{
-  font-size: 20px;
+.card-container .field-set .price {
+  font-size: 25px;
   color: red;
   font-weight: 700;
 }
 .card-container .field-set .decoration .price-original{
   text-decoration: line-through;
   color: black;
+  font-size: 25px;
+  font-weight: 500;
 }
 .card-container .field-set .heart{
   width: 20px;
@@ -479,14 +487,15 @@
 }
 .card-container .view-card .role{
   color: black;
-  font-size: 15px;
+  font-size: 20px;
+  /* margin-left: 100px; */
   font-weight: 500;
 }
 .card-container .view-card .newin p{
   width: 90px;
   font-size: 13px;
   margin-top: -60px;
-  margin-left: 200px;
+  margin-left: 260px;
   rotate: 270deg;
  font-weight: 600;
  color: black;
@@ -508,7 +517,7 @@
   padding-top: 40px;
   width: 100%;
   display: flex;
-  gap: 50px;
+  gap: 110px;
 }
 .end-container .app p{
   font-size: 16px;
