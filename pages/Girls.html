@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mens Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ✅ Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Your main CSS -->
+  <link rel="stylesheet" href="/style.css">
+
+    <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #f8f9fa;
+    }
+
+    .card img {
+      overflow: hidden;
+      object-fit: cover;
+    }
+
+    .cart-box {
+      margin-left: 715px;
+      margin-bottom: 5px;
+      width: 400px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .buy-now{
+      padding: 5px 20px;
+      border-radius: 5px;
+      background-color: blue;
+      color: white;
+      border: 2px solid white;
+    }
+    .card{
+      border: 2px solid white;
+      overflow: hidden;
+      border-radius: 5px;
+      background-color: rgba(128, 128, 128, 0.218);
+    }
+    .name-brand{
+      font-weight: 600;
+    }
+    .dollar{
+      color: red;
+      font-weight: 800;
+    }
+  </style>
+</head>
+
+<body>
+ <!-- Header -->
+ <div class="header-container">
+    <div class="navbar-top">
+      <p class="title">DISCOUNT 20% OF ALL PRODUCT FOR ORDERING VIA ONLINE</p>
+      <div class="NavbarTop-right">
+        <div class="dropdown">
+          <div class="view"><img src="/assets/world (1).png" alt="" class="flag-icon">CAMBODIA<i
+              class="fa-solid fa-chevron-down"></i>
+            <ul class="all-list">
+              <li><a href="#"><img src="/assets/world (1).png" alt="" class="flag-icon"> Cambaodia</a>៛ KHR</li>
+              <li><a href="#"><img src="/assets/united-states-of-america.png" alt="" class="flag-icon"> USA</a>$USD</li>
+              <li><a href="#"><img src="/assets/canada (2).png" alt="" class="flag-icon"> Canada</a>$cad</li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="lang">
+          <button class="shopbtn" type="button"><i style="color:red" data-lucide="heart"></i></button>
+          <button class="shopbtn" type="button"><i style="color:red" data-lucide="bell"></i></button>
+          <button class="shopbtn" type="button"><i style="color:red" data-lucide="shopping-bag"></i></button>
+          <!-- <button class="login"><a href="./form.html">login</a></button>
+          <button class="login"><a href="./create.html">Register</a></button> -->
+        </div>
+      </div>
+    </div>
+    <div class="navbar-bottom">
+      <a href="" class="logo">
+        <img src="/assets/logo.png" alt="">
+      </a>
+      <ul class="all-link">
+        <li class="Shoplink"><a href="/index.html"> Shop </a>
+
+        </li>
+        <li class="Shoplink"><a href="./pages/men.html"> MENS</a>
+        </li>
+        <li class="Shoplink"><a href=""> WOMENS</a>
+        </li>
+        <li class="Shoplink"><a href=""> BOYS</a>
+        </li>
+        <li class="Shoplink"><a href=""> GIRLS</a>
+        </li>
+      </ul>
+       <button class="btn-search" type="button"><input type="text" placeholder="Find Related content"><a href=""><i data-lucide="search"></i></a></button>
+      <!-- <button class="btn" type="button">Login</button> -->
+      <!-- <button class="btn" type="button">Register</button> -->
+      
+    </div>
+
+</div>
+<div style="width: 92%;height: auto; margin-left: 50px;" >
+<div >
+     <!-- ================== CAROUSEL ================== -->
+  <div id="menCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://i.pinimg.com/736x/55/4f/79/554f7950f2170699a27ff40b412b5150.jpg"
+             class="d-block w-100 carousel-img" alt="Slide 1">
+      </div>
+
+      <div class="carousel-item">
+        <img src="https://i.pinimg.com/736x/55/4f/79/554f7950f2170699a27ff40b412b5150.jpg"
+             class="d-block w-100 carousel-img" alt="Slide 2">
+      </div>
+
+      <div class="carousel-item">
+        <img src="https://i.pinimg.com/736x/55/4f/79/554f7950f2170699a27ff40b412b5150.jpg"
+             class="d-block w-100 carousel-img" alt="Slide 3">
+      </div>
+    </div>
+  </div>
+</div>  
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</div>
+<!-- card container -->
+<div class="container mt-4">
+    <!-- CART -->
+  <div class="cart-box mt-4">
+    <h4>🧾 Product Payment</h4>
+    <ul id="cartItems" class="list-group mb-3"></ul>
+    <!-- <h5>Total: $<span id="total">0</span></h5> -->
+    <!-- <button  class="buy-now" type="submit">Buy Now</button> -->
+     <button class="btn btn-primary mt-2"
+      onclick="addToCart('Payment', payment)">
+       Buy Now
+      </button>
+      <button class="btn btn-danger mt-2" onclick="clearCart()">
+       Clear
+      </button>
+  </div>
+  <!-- PRODUCT CARDS -->
+  <div class="row g-4 mt-1">
+    <h1>⏳ Sport Clothes</h1>
+    <div class="col-md-3">
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/cd/27/df/cd27df53f820f9847eb037260c596882.jpg">
+        <div class="card-body text-center">
+          <h5 class="name-brand">Sport T-Shirt</h5>
+          <p class="dollar">$ US20</p>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+          <button class="btn btn-primary"
+            onclick="addToCart('Sport T-Shirt', 20)">
+            Buy
+          </button>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/dc/d0/ac/dcd0ac21bb24e570ca8b9165612cfb39.jpg">
+        <div class="card-body text-center">
+          <h5 class="name-brand">Sport Jacket</h5>
+          <p class="dollar">$ US35</p>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+          <button class="btn btn-primary"
+            onclick="addToCart('Sport Jacket', 35)">
+            Buy
+          </button>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/af/ce/42/afce42996e23ac122d842bb4cbf64332.jpg">
+        <div class="card-body text-center">
+          <h5 class="name-brand">Sport Pants</h5>
+          <p class="dollar">$ US25</p>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+          <button class="btn btn-primary"
+            onclick="addToCart('Sport Pants', 25)">
+            Buy
+          </button>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/23/33/d1/2333d1032751112f2ebb913084ea8a8f.jpg">
+        <div class="card-body text-center">
+          <h5 class="name-brand">Sport Shorts</h5>
+          <p class="dollar">$ US18</p>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+          <button class="btn btn-primary"
+            onclick="addToCart('Sport Shorts', 18)">
+            Buy
+          </button>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Product card -->
+  <div class="row g-4 mt-1">
+    <h1>⏳Suite</h1>
+    <div class="col-md-3">
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/76/97/41/76974109058feb1373950863ea7b905b.jpg">
+        <div class="card-body text-center">
+          <h5 class="name-brand">MEN PIECE SUITS</h5>
+          <p class="dollar">$ US135</p>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+          <button class="btn btn-primary"
+            onclick="addToCart('Sport T-Shirt', 20)">
+            Buy
+          </button>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/06/83/58/068358d66730e938156eb652c51e35fe.jpg">
+        <div class="card-body text-center">
+          <h5 class="name-brand">MEN PIECE SUITS</h5>
+          <p class="dollar">$ US135</p>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+          <button class="btn btn-primary"
+            onclick="addToCart('Sport Jacket', 35)">
+            Buy
+          </button>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/ff/e8/f9/ffe8f9163f825c17173d5928997519af.jpg">
+        <div class="card-body text-center">
+          <h5 class="name-brand">MEN PIECE SUITS</h5>
+          <p class="dollar">$ US135</p>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+          <button class="btn btn-primary"
+            onclick="addToCart('Sport Pants', 25)">
+            Buy
+          </button>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+        </div>
+      </div>
+    </div>
+  <div class="col-md-3">
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/85/9e/d6/859ed6c8346b0531273636a69689ab88.jpg">
+        <div class="card-body text-center">
+          <h5 class="name-brand">MEN PIECE SUITS</h5>
+          <p class="dollar">$ US135</p>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+          <button class="btn btn-primary"
+            onclick="addToCart('Sport Shorts', 18)">
+            Buy
+          </button>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+        </div>
+      </div>
+  </div>
+  </div>
+  <!-- Product card -->
+  <div class="row g-4 mt-1">
+    <h1>Just Tops. Just Perfect.👕</h1>
+    <div class="col-md-3">
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/1f/ad/23/1fad2383dabc99159295006935e29882.jpg">
+        <div class="card-body text-center">
+          <h5 class="name-brand">T-Shirt</h5>
+          <p class="dollar">$ US11.10</p>
+           <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+          <button class="btn btn-primary"
+            onclick="addToCart('Sport T-Shirt', 20)">
+            Buy
+          </button>
+           <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/1a/ed/d4/1aedd466fd67e636e1823bf065a8d303.jpg">
+        <div class="card-body text-center">
+          <h5 class="name-brand">T-Shirts</h5>
+          <p class="dollar">$ US11.10</p>
+           <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+          <button class="btn btn-primary"
+            onclick="addToCart('Sport Jacket', 35)">
+            Buy
+          </button>
+           <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/f1/a8/3d/f1a83dd63fefa43d36d9af3e2caf0fbb.jpg">
+        <div class="card-body text-center">
+          <h5 class="name-brand">T-Shirts</h5>
+          <p class="dollar">$ US11.10</p>
+           <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+          <button class="btn btn-primary"
+            onclick="addToCart('Sport Pants', 25)">
+            Buy
+          </button>
+           <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/3c/a9/7a/3ca97a67c674ee6a8af05f213077856f.jpg">
+        <div class="card-body text-center">
+          <h5 class="name-brand">T-Shirts</h5>
+          <p class="dollar">$ US11.10</p>
+           <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+          <button class="btn btn-primary"
+            onclick="addToCart('Sport Shorts', 18)">
+            Buy
+          </button>
+           <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="row g-4 mt-1">
+    <h1>Daily Shoe Essentials 🛍️</h1>
+    <div class="col-md-3">
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/0c/b7/dc/0cb7dc321f91539da610baccb16ef3ae.jpg">
+        <div class="card-body text-center">
+          <h5 class="name-brand">Nike Shoes</h5>
+          <p class="dollar">$ US30.94</p>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+          <button class="btn btn-primary"
+            onclick="addToCart('Sport T-Shirt', 30.94)">
+            Buy
+          </button>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/b2/d7/3a/b2d73a01e91a695343d7db21b9116aba.jpg">
+        <div class="card-body text-center">
+          <h5 class="name-brand">Nike Shoes</h5>
+          <p class="dollar">$ US30.94</p>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+          <button class="btn btn-primary"
+            onclick="addToCart('Sport Jacket', 30.94)">
+            Buy
+          </button>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/93/1b/e5/931be5552049ba595c6e45d8ddc62182.jpg">
+        <div class="card-body text-center">
+          <h5 class="name-brand">Nike Shoes</h5>
+          <p class="dollar">$ US30.94</p>
+           <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+          <button class="btn btn-primary"
+            onclick="addToCart('Sport Pants', 30.94)">
+            Buy
+          </button>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/f9/68/7a/f9687a10ae0d31663037cb82ed413337.jpg">
+        <div class="card-body text-center">
+          <h5 class="name-brand">Nike Shoes</h5>
+          <p class="dollar">$ US30.94</p>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+          <button class="btn btn-primary"
+            onclick="addToCart('Sport Shorts', 30.94)">
+            Buy
+          </button>
+          <a href=""><img class="heart" src="/assets/heart (1).png" alt=""></a>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+<!-- End container -->
+ <div style="width: 90%;margin-left: 60px;">
+  <div class="end-container">
+    <div class="app">
+      <p>G3 APP</p>
+      <img src="/assets/qrcode.png" alt="">
+    </div>
+    <div class="loyal">
+      <p class="loyality">LOYALTY</p>
+      <p><i data-lucide="heart-pulse"></i> Memberships & Benefits</p>
+    </div>
+    <div class="follow">
+      <p class="loyality">FOLLOW US</p>
+      <p><i data-lucide="facebook"></i> <a href="https://www.facebook.com/?_rdc=2&_rdr#">FACEBOOK</a> </p>
+      <p><i data-lucide="instagram"></i> <a href="https://www.instagram.com/">INSTAGRAM</a> </p>
+      <p><i data-lucide="youtube"></i>   <a href="https://www.youtube.com/">YOUTUBE</a> </p>
+    </div>
+    <div class="coustomer">
+      <p class="loyality">CUSTOMER SERVICES</p>
+      <p class="coustomer">Online Exchange Services</p>
+      <p class="coustomer">Privacy & Polycy</p>
+      <p class="coustomer">FAQs & Guides</p>
+      <p class="coustomer">Find a Store</p>
+    </div>
+    <div >
+      <p class="loyality">CONTACT</p>
+      <p><i data-lucide="phone"></i>  (+855)085 335 335</p>
+      <p><i data-lucide="tv-minimal-play"></i>Telegram</p>
+    </div>
+  </div>
+  <div class="acept">
+    <h1 style="font-size: 16px;margin-bottom: 20px;">WE ACCEPT</h1>
+    <div class="accept-combaine">
+      <img src="https://www.ababank.com/fileadmin/user_upload/Payment_Cards/Debit/UPI_Debit.png" alt="">
+      <img src="https://cdn.prod.website-files.com/6421631e1cc24c10e5a5503c/655eb6e1090ee9ecd434424b_plat-debit-min.png" alt="">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsx_wCV4LFzTc2FlHepNsz5m-BXHuqN8grew&s" alt="">
+      <img src="https://www.maybank2u.com.my/iwov-resources/images/personal/cards/visa/_0010_VISA-Blue-OL.png" alt="">
+      <img src="https://www.chipmongbank.com.kh/api/images//19df84e0-e9cc-49e7-9353-5ce8abe0f43b.png" alt="">
+      <img src="https://www.creditbank.com.pg/sites/default/files/2024-08/VisaClassicDebit_CMYK_HR_personal.png" alt="">
+      <img src="https://www.sathapana.com.kh/uploads/8fb1fac6740afadb23704e035c8009948c44ef15/Sliver-Credit-card-02.jpg" alt="">
+      <img src="https://woori.com.vn/wp-content/uploads/2024/08/Woori-Visa-Classic-Corporate-1-1.png" alt="">
+    </div>
+  </div>
+  <hr style="height: 7px;background-color: black;margin-top: 10px;">
+   <h1>Thanks You</h1>
+ </div>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  let total = 0;
+
+  function addToCart(name, price) {
+    const cartItems = document.getElementById("cartItems");
+
+    const li = document.createElement("li");
+    li.className = "list-group-item d-flex justify-content-between";
+    li.innerHTML = `<span>${name}</span><span>$${price}</span>`;
+
+    cartItems.appendChild(li);
+    total += price;
+    payment=total;
+    document.getElementById("total").innerText = total;
+    document.getElementById("payment").innerText= payment;
+  }
+
+  function clearCart() {
+    document.getElementById("cartItems").innerHTML = "";
+    total = 0;
+    payment = 0;
+    document.getElementById("total").innerText = 0;
+    document.getElementById("payment").innerText = 0;
+  }
+
+</script>
+</body>
+ <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script>
+  lucide.createIcons();
+</script>
+</html>
